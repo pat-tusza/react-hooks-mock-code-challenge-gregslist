@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-function Search({setListings}) {
-  const [searchCon, setSearchCon] = useState("")
+function Search({searchCon, setSearchCon}) {
+  
   
   function handleSubmit(e) {
     e.preventDefault();
@@ -9,13 +9,9 @@ function Search({setListings}) {
   }
 
   function handleSearch(e){
-    setSearchCon(e.target.value)
-    setListings((listings)=>{
-      listings.filter((list)=>{
-       return list.description.includes(searchCon)
-      })
-    })
+    setSearchCon(e.target.value)  
   }
+  
 
   return (
     <form className="searchbar" onSubmit={handleSubmit}>

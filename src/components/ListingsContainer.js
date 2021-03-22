@@ -2,8 +2,13 @@ import React from "react";
 import ListingCard from "./ListingCard";
 
 
-function ListingsContainer({listings, loadCards}) {
-  const useableList = listings.map((list) => {
+function ListingsContainer({listings, loadCards, searchCon}) {
+  
+  const filteredList = listings.filter((listings)=>{
+    return listings.description.includes(searchCon)
+  })
+  
+  const useableList = filteredList.map((list) => {
     return <ListingCard
             key={list.id}
             id={list.id} 

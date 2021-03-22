@@ -4,6 +4,7 @@ import ListingsContainer from "./ListingsContainer";
 
 function App() {
   const [listings, setListings] = useState([])
+  const [searchCon, setSearchCon] = useState("")
 
   function loadCards(){
     fetch('http://localhost:6001/listings')
@@ -16,10 +17,15 @@ function App() {
 
   return (
     <div className="app">
-      <Header setListings={setListings}/>
+      <Header 
+      setListings={setListings}
+      listings={listings}
+      setSearchCon={setSearchCon}
+      searchCon={searchCon}/>
       <ListingsContainer 
               listings = {listings}
-              loadCards={loadCards}/>
+              loadCards={loadCards}
+              searchCon={searchCon}/>
     </div>
   );
 }
