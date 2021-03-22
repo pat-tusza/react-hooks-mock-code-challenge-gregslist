@@ -107,6 +107,9 @@ them however you see fit!
 As a user:
 
 1. I can sort the listings alphabetically by location.
+    
+
+
 2. I can create a new listing by submitting a form, and persist the changes to
    the backend.
 

@@ -7,8 +7,14 @@ function ListingsContainer({listings, loadCards, searchCon}) {
   const filteredList = listings.filter((listings)=>{
     return listings.description.includes(searchCon)
   })
+  console.log(filteredList)
+
+  const alphaList = filteredList.sort((a , b )=> {
+    return a.location.localeCompare(b.location)
+  })
+  console.log(alphaList)
   
-  const useableList = filteredList.map((list) => {
+  const useableList = alphaList.map((list) => {
     return <ListingCard
             key={list.id}
             id={list.id} 
