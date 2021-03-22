@@ -27,12 +27,37 @@ find the [Core Deliverables](#Core-Deliverables) section.
 
 As a user:
 
-1. When the app starts, I can see all listings.
+1. When the app starts, I can see all listings. 🥸
+  
+  Fetch request to API (db.json) in App.js
+  Save data in useEffect 
+  Pass arry of object down to ListingContainer
+  Map data 
+  Pass Mapped Data 
+  Plug in data in Card
+
+
 2. I can "favorite" and "unfavorite" a listing on the frontend by clicking the
    star icon. This feature doesn't need backend persistence.
+   
+   useState to toggle on and off 
+   onClick event Listener w/ handleclick fucntion
+
+
 3. I can remove a listing from the page by clicking the trash can icon. This
    change should be persisted in the backend.
+
+   Create a function for a delete fetch in ListingContainer
+   add event listner to trash button 
+
+
+
 4. I can search for listings by their name.
+
+    onChange useState on the search bar
+    
+
+
 
 ### Endpoints for Core Deliverables
 
